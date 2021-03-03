@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Text, View, StyleSheet, Image, Animated,StatusBar} from 'react-native';
+import {Text, View, StyleSheet, Image, Animated} from 'react-native';
 
 export default class Splash extends Component {
   constructor() {
@@ -43,7 +43,7 @@ export default class Splash extends Component {
         toValue: 1,
         duration: 1500,
       }),
-    ]).start(() => this.props.navigation.navigate('Main'));
+    ]).start(() => this.props.navigation.navigate(''));
   };
 
   render() {
@@ -54,57 +54,53 @@ export default class Splash extends Component {
     });
 
     return (
-      <>
-<StatusBar backgroundColor='tomato'
-/>
-<View style={styles.container}>
+      <View style={styles.container}>
       
         <Animated.View
           style={{ flexDirection: "row", position: "absolute", opacity: View1 }}
         >
-          <Image source={require("../../assests/images/m.png")} style={{width:50,height:50,borderRadius:50,borderWidth:1}}/>
-          <Image source={require("../../assests/images/i.png")}  style={{width:50,height:50,borderRadius:50,borderWidth:1}}/>
-          <Image source={require("../../assests/images/n.png")}  style={{width:50,height:50,borderRadius:50,borderWidth:1}}/>
-          <Image source={require("../../assests/images/u.png")}  style={{width:50,height:50,borderRadius:50,borderWidth:1}}/>
-          <Image source={require("../../assests/images/t.png")}  style={{width:50,height:50,borderRadius:50,borderWidth:1}}/>
-          <Image source={require("../../assests/images/e.png")} style={{width:50,height:50,borderRadius:50,borderWidth:1}} />
-           <Image source={require("../../assests/images/s.png")} style={{width:50,height:50,borderRadius:50,borderWidth:1}} />
+          <Image source={require("../../assests/images/m.png")} style={{width:50,height:50}} />
+          <Image source={require("../../assests/images/i.png")} />
+          <Image source={require("../../assests/images/n.png")} />
+          <Image source={require("../../assests/images/u.png")} />
+          <Image source={require("../../assests/images/t.png")} />
+          <Image source={require("../../assests/images/e.png")} />
+          <Image source={require("../../assests/images/s.png")} />
         </Animated.View>
         <Animated.View
           style={{ flexDirection: "row", position: "absolute", opacity: View2 }}
         >
-          <Image source={require("../../assests/images/t.png")}  style={{width:50,height:50,borderRadius:50,borderWidth:1}}/>
-          <Image source={require("../../assests/images/o.png")} style={{width:50,height:50,borderRadius:50,borderWidth:1}} />
+          <Image source={require("../../assests/images/t.png")} />
+          <Image source={require("../../assests/images/o.png")} />
           
         </Animated.View>
         <Animated.View
           style={{ flexDirection: "row", position: "absolute", opacity: View3 }}
         >
-          <Image source={require("../../assests/images/w.png")}  style={{width:50,height:50}} />
-          <Image source={require("../../assests/images/i.png")}  style={{width:50,height:50}}/>
-          <Image source={require("../../assests/images/n.png")} style={{width:50,height:50}} />
-          <Image source={require("../../assests/images/i.png")} style={{width:50,height:50}} />
-          <Image source={require("../../assests/images/t.png")} style={{width:50,height:50}} />
+          <Image source={require("../../assests/images/w.png")} />
+          <Image source={require("../../assests/images/i.png")} />
+          <Image source={require("../../assests/images/n.png")} />
+          <Image source={require("../../assests/images/i.png")} />
+          <Image source={require("../../assests/images/t.png")} />
         </Animated.View>
 
-        {/* <Animated.View
+        <Animated.View
           style={{ flexDirection: "row", position: "absolute", opacity: View4 }}
         >
-          <Animated.Image
+          {/* <Animated.Image
             source={{
               uri:
                 "https://media.istockphoto.com/photos/check-mark-picture-id1093915024?k=6&m=1093915024&s=612x612&w=0&h=CghyYdBSZWCnyB-Tv8X4NP74pzWcsp6Kw2VXndnmxDo=",
             }}
             style={{
-              height: 100,
-              width: 100,
+              height: 300,
+              width: 300,
               borderRadius: 150,
               transform: [{ scale: size }],
             }}
-          />
-        </Animated.View> */}
+          /> */}
+        </Animated.View>
       </View>
-      </>
     );
   }
 }
